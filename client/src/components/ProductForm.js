@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import axios from 'axios'
+import axios from 'axios';
+import { useState } from 'react';
 
 const ProductForm = (props) => {
     const {products, setProducts} = props;
@@ -35,7 +35,7 @@ const ProductForm = (props) => {
             <input onChange={(e) => setTitle(e.target.value)} value={title} name="title" type='text'/>
             <br/>
             <label>Price:</label>
-            <input onChange={(e) => setPrice(e.target.value)} value = {price} name="price" type="number" />
+            <input onChange={(e) => setPrice(e.target.value)} value = {price} name="price" type="number" min="1" />
             <br/>
             <label>Description:</label>
             <input  onChange={(e) => setDescription(e.target.value)} value={description} name="description" type="text"/> 
